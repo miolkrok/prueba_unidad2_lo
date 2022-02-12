@@ -36,10 +36,10 @@ public class Doctor {
 	@Column(name="doct_fecha_nacimiento", columnDefinition = "TIMESTAMP")
 	private LocalDateTime fechaNacimiento;
 	@Column(name="doct_numero_consultorio")
-	private String codigoSeguro;
+	private String numeroConsultorio;
 	
 	@Column(name="doct_codigo_senescyt")
-	private String estatura;
+	private String codigoSenescyt;
 	
 	@Column(name="doct_genero")
 	private String genero;
@@ -87,20 +87,20 @@ public class Doctor {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public String getCodigoSeguro() {
-		return codigoSeguro;
+	public String getNumeroConsultorio() {
+		return numeroConsultorio;
 	}
 
-	public void setCodigoSeguro(String codigoSeguro) {
-		this.codigoSeguro = codigoSeguro;
+	public void setNumeroConsultorio(String numeroConsultorio) {
+		this.numeroConsultorio = numeroConsultorio;
 	}
 
-	public String getEstatura() {
-		return estatura;
+	public String getCodigoSenescyt() {
+		return codigoSenescyt;
 	}
 
-	public void setEstatura(String estatura) {
-		this.estatura = estatura;
+	public void setCodigoSenescyt(String codigoSenescyt) {
+		this.codigoSenescyt = codigoSenescyt;
 	}
 
 	public String getGenero() {
@@ -122,9 +122,13 @@ public class Doctor {
 	@Override
 	public String toString() {
 		return "Doctor [id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido
-				+ ", fechaNacimiento=" + fechaNacimiento + ", codigoSeguro=" + codigoSeguro + ", estatura=" + estatura
-				+ ", genero=" + genero + ", doctCitas=" + doctCitas + "]";
+				+ ", fechaNacimiento=" + fechaNacimiento + ", numeroConsultorio=" + numeroConsultorio
+				+ ", codigoSenescyt=" + codigoSenescyt + ", genero=" + genero + ", doctCitas=" + doctCitas + "]";
 	}
+
+
+
+
 	
 	
 }

@@ -1,5 +1,6 @@
 package ec.edu.uce.modelo;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -29,7 +30,7 @@ public class CitaMedica {
 	@Column(name="cime_fecha_cita", columnDefinition = "TIMESTAMP")
 	private LocalDateTime fechaCita;
 	@Column(name="cime_valor_cita")
-	private String valorCita;
+	private BigDecimal valorCita;
 	@Column(name="cime_lugar_cita")
 	private String lugarCita;
 	@Column(name="cime_diagnostico")
@@ -72,11 +73,13 @@ public class CitaMedica {
 		this.fechaCita = fechaCita;
 	}
 
-	public String getValorCita() {
+
+
+	public BigDecimal getValorCita() {
 		return valorCita;
 	}
 
-	public void setValorCita(String valorCita) {
+	public void setValorCita(BigDecimal valorCita) {
 		this.valorCita = valorCita;
 	}
 
@@ -134,5 +137,6 @@ public class CitaMedica {
 				+ valorCita + ", lugarCita=" + lugarCita + ", diagnostico=" + diagnostico + ", receta=" + receta
 				+ ", fechaProximaCita=" + fechaProximaCita + ", doctor=" + doctor + ", paciente=" + paciente + "]";
 	}
+
 	
 }
