@@ -1,8 +1,10 @@
 package ec.edu.uce.service;
 
-import ec.edu.uce.modelo.CitaMedica;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 
 public interface ICitaMedicaService {
 
-	void insertarCitaMedica(CitaMedica citaMedica);
+	void insertarCitaMedica(String numeroCita, LocalDateTime fechaCita,BigDecimal valorCita, String lugarCita, String apellidoDoctor, String codigoSeguroPaciente );
 }

@@ -2,12 +2,14 @@ package ec.edu.uce.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
+import ec.edu.uce.modelo.Doctor;
 import ec.edu.uce.modelo.Paciente;
 
 
@@ -43,6 +45,14 @@ public class PacienteRepoImpl implements IPacienteRepo{
 		// TODO Auto-generated method stub
 		Paciente pacienteBorrar = this.buscarPacientePorId(id);
 		this.entityManager.remove(pacienteBorrar);
+	}
+
+	@Override
+	public Paciente buscarPacientePorCodigo(String CodigoSeguroPaciente) {
+		// TODO Auto-generated method stub
+		TypedQuery<Paciente> myQuery = this.entityManager.createQuery("select p from Paciente p where p.codigoSeguro=: valor",Paciente.class);
+		myQuery.setParameter("valor", CodigoSeguroPaciente);
+		return myQuery.getSingleResult();
 	}
 
 }

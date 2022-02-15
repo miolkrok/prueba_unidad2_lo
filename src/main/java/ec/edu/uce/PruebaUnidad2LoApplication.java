@@ -6,8 +6,7 @@ import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,6 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import ec.edu.uce.modelo.CitaMedica;
 import ec.edu.uce.modelo.Doctor;
 import ec.edu.uce.modelo.Paciente;
+import ec.edu.uce.service.GestorCitaMedicaServiceImpl;
 import ec.edu.uce.service.ICitaMedicaService;
 import ec.edu.uce.service.IDoctorService;
 import ec.edu.uce.service.IPacienteService;
@@ -23,7 +23,7 @@ import ec.edu.uce.service.IPacienteService;
 @SpringBootApplication
 public class PruebaUnidad2LoApplication implements CommandLineRunner{
 
-	private static final Logger LOG =  LoggerFactory.getLogger(PruebaUnidad2LoApplication.class);
+	private static Logger LOG = Logger.getLogger(PruebaUnidad2LoApplication.class);
 	
 	@Autowired
 	private IDoctorService doctorService;
@@ -76,40 +76,35 @@ public class PruebaUnidad2LoApplication implements CommandLineRunner{
 //		
 //		this.pacienteService.guardarPaciente(pac1);
 //		
-//		Paciente pac2 = new Paciente();
-//		pac2.setCedula("1794986259");
-//		pac2.setNombre("ariel");
-//		pac2.setApellido("cabrera");
-//		LocalDateTime miFechaNacimiento2 = LocalDateTime.of(1995, Month.MARCH,4,12,30);
-//		pac2.setFechaNacimiento(miFechaNacimiento2);
-//		pac2.setCodigoSeguro("17884a");
-//		pac2.setEstatura("1.69m");
-//		pac2.setPeso("70kg");
-//		pac2.setGenero("masculino");
-//		
-//		this.pacienteService.guardarPaciente(pac2);
+		Paciente pac2 = new Paciente();
+		pac2.setId(2);
+		pac2.setCedula("1841615061");
+		pac2.setNombre("karla");
+		pac2.setApellido("icaza");
+		LocalDateTime miFechaNacimiento2 = LocalDateTime.of(1995, Month.APRIL,30,12,30);
+		pac2.setFechaNacimiento(miFechaNacimiento2);
+		pac2.setCodigoSeguro("184961q");
+		pac2.setEstatura("1.70m");
+		pac2.setPeso("72kg");
+		pac2.setGenero("femenino");
 		
+		this.pacienteService.actualizarPaciente(pac2);
 		
-		Doctor midoc = new Doctor();
-		midoc.setCedula("1718496944");
-		Paciente mipaci = new Paciente();
-		mipaci.setCedula("1794986259");
+		Doctor doc2 = new Doctor();
+		doc2.setId(2);
+		doc2.setCedula("1704115102");
+		doc2.setNombre("byron");
+		doc2.setApellido("quiroz");
+		LocalDateTime miFechaNacimientoDOC = LocalDateTime.of(1979, Month.SEPTEMBER,16,12,30);
+		doc2.setFechaNacimiento(miFechaNacimientoDOC);
+		doc2.setNumeroConsultorio("7a");
+		doc2.setCodigoSenescyt("8785-1894-2010");
+		doc2.setGenero("masculino");
 		
-		
-		//vamos a construir la lista de detalles
-		List<CitaMedica> citas = new ArrayList<>();
-		
-		//primer detalle
-		CitaMedica d1 = new CitaMedica();
-		d1.setNumeroCita("2");
-		d1.setFechaCita(LocalDateTime.of(2022, Month.MARCH,4,12,30));
-		d1.setValorCita(new BigDecimal(10.5));
-
+		this.doctorService.actualizarDoctor(doc2);
 		
 
-		
-		
-		this.citaService.insertarCitaMedica(d1);
+		this.citaService.insertarCitaMedica("20", LocalDateTime.of(2022, Month.MARCH,25,12,30),new BigDecimal(30.50), "recreo", "quiroz", "184961q");
 		
 
 		

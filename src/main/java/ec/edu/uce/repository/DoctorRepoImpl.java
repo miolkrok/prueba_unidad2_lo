@@ -2,6 +2,7 @@ package ec.edu.uce.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
 import org.slf4j.Logger;
@@ -42,6 +43,14 @@ public class DoctorRepoImpl implements IDoctorRepo{
 		// TODO Auto-generated method stub
 		Doctor doctorBorrar = this.buscarDoctorPorId(id);
 		this.entityManager.remove(doctorBorrar);
+	}
+
+	@Override
+	public Doctor buscarDoctorPorApellido(String apellido) {
+		// TODO Auto-generated method stub
+		TypedQuery<Doctor> myQuery = this.entityManager.createQuery("select d from Doctor d where d.apellido=: valor",Doctor.class);
+		myQuery.setParameter("valor", apellido);
+		return myQuery.getSingleResult();
 	}
 
 }

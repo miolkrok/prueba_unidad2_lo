@@ -7,5 +7,6 @@ public interface IDoctorRepo {
 	void actualizarDoctor(Doctor doctor);
 	Doctor buscarDoctorPorId(Integer id);
 	void borrarDoctorPorId(Integer id);
+	Doctor buscarDoctorPorApellido(String apellido);
 
 }
