@@ -7,4 +7,5 @@ import java.time.LocalDateTime;
 public interface ICitaMedicaService {
 
 	void insertarCitaMedica(String numeroCita, LocalDateTime fechaCita,BigDecimal valorCita, String lugarCita, String apellidoDoctor, String codigoSeguroPaciente );
+	void resultadoCita(String numero, String diagnostico, String receta, LocalDateTime fechaProxima);
 }

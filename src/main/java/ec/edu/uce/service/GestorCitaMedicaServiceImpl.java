@@ -48,5 +48,13 @@ public class GestorCitaMedicaServiceImpl implements ICitaMedicaService {
 		}
 		
 	}
+	@Override
+	public void resultadoCita(String numero, String diagnostico, String receta, LocalDateTime fechaProxima) {
+		CitaMedica c1=this.citaMedicaRepoG.buscarPorNumero(numero);
+		c1.setDiagnostico(diagnostico);
+		c1.setReceta(receta);
+		c1.setFechaProximaCita(fechaProxima);
+		this.citaMedicaRepoG.actualizarCitaMedica(c1);
+	}
 
 }

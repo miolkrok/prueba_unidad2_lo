@@ -76,39 +76,38 @@ public class PruebaUnidad2LoApplication implements CommandLineRunner{
 //		
 //		this.pacienteService.guardarPaciente(pac1);
 //		
-		Paciente pac2 = new Paciente();
-		pac2.setId(2);
-		pac2.setCedula("1841615061");
-		pac2.setNombre("karla");
-		pac2.setApellido("icaza");
-		LocalDateTime miFechaNacimiento2 = LocalDateTime.of(1995, Month.APRIL,30,12,30);
-		pac2.setFechaNacimiento(miFechaNacimiento2);
-		pac2.setCodigoSeguro("184961q");
-		pac2.setEstatura("1.70m");
-		pac2.setPeso("72kg");
-		pac2.setGenero("femenino");
+//		Paciente pac2 = new Paciente();
+//		pac2.setId(2);
+//		pac2.setCedula("1841615061");
+//		pac2.setNombre("karla");
+//		pac2.setApellido("icaza");
+//		LocalDateTime miFechaNacimiento2 = LocalDateTime.of(1995, Month.APRIL,30,12,30);
+//		pac2.setFechaNacimiento(miFechaNacimiento2);
+//		pac2.setCodigoSeguro("184961q");
+//		pac2.setEstatura("1.70m");
+//		pac2.setPeso("72kg");
+//		pac2.setGenero("femenino");
+//		
+//		this.pacienteService.actualizarPaciente(pac2);
+//		
+//		Doctor doc2 = new Doctor();
+//		doc2.setId(2);
+//		doc2.setCedula("1704115102");
+//		doc2.setNombre("byron");
+//		doc2.setApellido("quiroz");
+//		LocalDateTime miFechaNacimientoDOC = LocalDateTime.of(1979, Month.SEPTEMBER,16,12,30);
+//		doc2.setFechaNacimiento(miFechaNacimientoDOC);
+//		doc2.setNumeroConsultorio("7a");
+//		doc2.setCodigoSenescyt("8785-1894-2010");
+//		doc2.setGenero("masculino");
+//		
+//		this.doctorService.actualizarDoctor(doc2);
+//		
+//
+//		this.citaService.insertarCitaMedica("20", LocalDateTime.of(2022, Month.MARCH,25,12,30),new BigDecimal(30.50), "recreo", "quiroz", "184961q");
+//		
 		
-		this.pacienteService.actualizarPaciente(pac2);
-		
-		Doctor doc2 = new Doctor();
-		doc2.setId(2);
-		doc2.setCedula("1704115102");
-		doc2.setNombre("byron");
-		doc2.setApellido("quiroz");
-		LocalDateTime miFechaNacimientoDOC = LocalDateTime.of(1979, Month.SEPTEMBER,16,12,30);
-		doc2.setFechaNacimiento(miFechaNacimientoDOC);
-		doc2.setNumeroConsultorio("7a");
-		doc2.setCodigoSenescyt("8785-1894-2010");
-		doc2.setGenero("masculino");
-		
-		this.doctorService.actualizarDoctor(doc2);
-		
-
-		this.citaService.insertarCitaMedica("20", LocalDateTime.of(2022, Month.MARCH,25,12,30),new BigDecimal(30.50), "recreo", "quiroz", "184961q");
-		
-
-		
-
+		this.citaService.resultadoCita("10", "Gripe", "Paracetamol", LocalDateTime.of(2023, Month.DECEMBER, 8, 10, 30));
 
 		
 
