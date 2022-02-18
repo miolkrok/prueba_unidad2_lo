@@ -91,7 +91,7 @@ public class PruebaUnidad2LoApplication implements CommandLineRunner{
 //		this.pacienteService.guardarPaciente(pac2);
 //		
 
-//		this.citaService.insertarCitaMedica("10", LocalDateTime.of(2022, Month.MARCH,26,12,30),new BigDecimal(35.50), "recreo", "178496944", "1841615061");
+//		this.citaService.insertarCitaMedica("10", LocalDateTime.of(2022, Month.MARCH,26,12,30),new BigDecimal(50), "recreo", "178496944", "1841615061");
 		
 		
 //		this.citaService.resultadoCita("24", "Gripe", "Paracetamol", LocalDateTime.of(2022, Month.MARCH, 1, 8, 30));
