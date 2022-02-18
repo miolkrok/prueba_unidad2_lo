@@ -8,5 +8,6 @@ public interface IDoctorRepo {
 	Doctor buscarDoctorPorId(Integer id);
 	void borrarDoctorPorId(Integer id);
 	Doctor buscarDoctorPorApellido(String apellido);
+	Doctor buscarDoctorPorCedula(String cedula);
 
 }

@@ -1,10 +1,14 @@
 package ec.edu.uce.service;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ec.edu.uce.modelo.Paciente;
+import ec.edu.uce.modelo.PacienteTO;
 import ec.edu.uce.repository.IPacienteRepo;
 
 
@@ -39,6 +43,12 @@ public class PacienteServiceImpl implements IPacienteService{
 	public void borrarPacientePorId(Integer id) {
 		// TODO Auto-generated method stub
 		this.pacienteRepo.borrarPacientePorId(id);
+	}
+
+	@Override
+	public List<PacienteTO> buscarPorPacienteSencillo(LocalDateTime fecha, String genero) {
+		// TODO Auto-generated method stub
+		return this.pacienteRepo.buscarPorPacienteSencillo(fecha, genero);
 	}
 
 }

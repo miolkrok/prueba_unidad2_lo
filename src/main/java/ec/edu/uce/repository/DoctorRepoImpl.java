@@ -53,4 +53,12 @@ public class DoctorRepoImpl implements IDoctorRepo{
 		return myQuery.getSingleResult();
 	}
 
+	@Override
+	public Doctor buscarDoctorPorCedula(String cedula) {
+		// TODO Auto-generated method stub
+		TypedQuery<Doctor> myQuery = this.entityManager.createQuery("select d from Doctor d where d.cedula=: valor",Doctor.class);
+		myQuery.setParameter("valor", cedula);
+		return myQuery.getSingleResult();
+	}
+
 }

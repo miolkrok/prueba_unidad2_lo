@@ -1,3 +1,7 @@
 2022-02-15 16:36:57 INFO  PacienteServiceImpl:29 - SE HA ACTUALIZADO UNA CITA MEDICA
 2022-02-15 16:36:57 INFO  DoctorServiceImpl:30 - SE HA ACTUALIZADO UNA CITA MEDICA
 2022-02-15 16:36:58 INFO  GestorCitaMedicaServiceImpl:45 - SE HA INGRESADO UNA CITA MEDICA
+2022-02-18 16:22:38 INFO  GestorCitaMedicaServiceImpl:45 - SE HA INGRESADO UNA CITA MEDICA
+2022-02-18 16:46:09 INFO  PruebaUnidad2LoApplication:114 - PacienteTO [fechaNacimiento=1995-03-04T12:30, genero=masculino, nombre=ariel, cedula=1794986259]
+2022-02-18 16:46:09 INFO  PruebaUnidad2LoApplication:114 - PacienteTO [fechaNacimiento=1995-03-10T12:30, genero=masculino, nombre=ariel, cedula=1706163656]
+2022-02-18 17:20:32 INFO  PruebaUnidad2LoApplication:100 - PacienteTO [fechaNacimiento=1995-03-04T12:30, genero=masculino, nombre=ariel, cedula=1794986259]
